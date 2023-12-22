@@ -1,4 +1,37 @@
-.graph{
-    height: 60vh;
-    width: 60vw;
+.card{
+    background-color:rgba(249, 249, 240, 0.954);
+    width:max-content;
+    position: relative;
+    padding: 2vw;
+    border: 2px;
+    border-radius: 20px;
+    display:block;
+    margin: auto;
+    border-style:double;
+}
+.heading{
+    display: flex;
+    justify-content: center;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    margin: auto;
+    font-weight: bolder;
+    font-size:35px;
+    padding:3px;
+    width: 25vw;
+    color:rgba(10, 63, 63, 0.823);
+    /* text-decoration: underline; */
+    /* border-radius: 7px;
+    border-style:double;
+    background-color: lavender; */
+}
+.bg {    
+    height: 65vh;
+    width: 65vw;
+    margin-bottom: 5px;
+    margin: auto;
+    background-color:ghostwhite;
+    border: 1px;
+    border-radius: 7px;
+    padding:20px;
+    border-style:groove;
 }

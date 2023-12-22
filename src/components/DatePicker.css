@@ -1,16 +1,22 @@
 /* DatePicker.css */
 
 .date-picker-container {
-    font-family: 'Arial', sans-serif;
-    margin: 20px;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    width: 300px;
+  font-family: 'Arial', sans-serif;
+  padding: 20px;
+  /* background-color:rgba(224, 255, 255, 0.928); */
+  background-color:ghostwhite;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 300px;
+  cursor:pointer;
+  margin-bottom: 2vh;
+  margin-top: 2vh;
+  border-style:double;
   }
   
   label {
     display: block;
+    font-weight: bold;
     margin-bottom: 8px;
   }
   
@@ -19,11 +25,13 @@
     padding: 8px;
     margin-bottom: 16px;
     border: 1px solid #ccc;
+    cursor:pointer;
     border-radius: 4px;
   }
   
   p {
     margin-top: 12px;
-    color: #4caf50;
+    font-style:italic;
+    color:red;
   }
   

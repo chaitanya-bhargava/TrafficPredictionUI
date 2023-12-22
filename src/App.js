@@ -1,8 +1,8 @@
 import Junction1 from './output/junction1.csv';
 import Papa from 'papaparse';
 import './App.css'
-import {useEffect, useState} from 'react';
-import {Bar} from 'react-chartjs-2';
+import { useEffect, useState } from 'react';
+import { Bar } from 'react-chartjs-2';
 import DatePicker from './components/DatePicker.js'
 
 import {
@@ -14,7 +14,7 @@ import {
   Tooltip,
   Legend,
 } from 'chart.js';
- 
+
 ChartJS.register(
   CategoryScale,
   LinearScale,
@@ -23,7 +23,7 @@ ChartJS.register(
   Tooltip,
   Legend,
 )
- 
+
 function App() {
   const [chartData, setChartData] = useState({
     datasets: []
@@ -39,18 +39,18 @@ function App() {
       dynamicTyping: true,
       delimiter: "",
       complete: ((result) => {
-        const newData = result.data.filter((item)=>{
-          return (item['Date'].substr(0,10))===selectedDate
+        const newData = result.data.filter((item) => {
+          return (item['Date'].substr(0, 10)) === selectedDate
         })
         console.log(newData);
         setChartData({
-          labels: newData.map((item)=>{
-            return `${item['Date'].substr(11,2)} H`;
+          labels: newData.map((item) => {
+            return `${item['Date'].substr(11, 2)} H`;
           }),
           datasets: [
             {
               label: "Vehicles",
-              data: newData.map((item)=>{
+              data: newData.map((item) => {
                 return item['Vehicles'];
               }),
               borderColor: "black",
@@ -62,7 +62,7 @@ function App() {
           responsive: true,
           plugins: {
             legend: {
-              position: 'top'
+              position: 'top',
             },
             title: {
               display: true,
@@ -73,24 +73,24 @@ function App() {
       })
     })
   }, [selectedDate])
- 
+
   return (
-    <div>
-      <h1>Traffic Prediction</h1>
-      <DatePicker selectedDate={selectedDate} setSelectedDate={setSelectedDate}/>
+    <div className='card'>
+      <h1 className='heading'>Traffic Prediction</h1>
+      <DatePicker selectedDate={selectedDate} setSelectedDate={setSelectedDate} />
       {
         chartData.datasets.length > 0 ? (
-          <div className='graph'>
-            <Bar options={chartOptions} data={chartData}/>
-            </div>
+          <div >
+            <Bar className='bg' options={chartOptions} data={chartData} />
+          </div>
         ) : (
           <div>
             Loading...
-            </div>
+          </div>
         )
       }
     </div>
   );
 }
- 
+
 export default App;
