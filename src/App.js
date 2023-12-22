@@ -45,7 +45,7 @@ function App() {
         console.log(newData);
         setChartData({
           labels: newData.map((item)=>{
-            return item['Date'].substr(11,2);
+            return `${item['Date'].substr(11,2)} H`;
           }),
           datasets: [
             {
