@@ -3,12 +3,13 @@
 .date-picker-container {
   font-family: 'Arial', sans-serif;
   padding: 20px;
+  padding-right:40px;
   /* background-color:rgba(224, 255, 255, 0.928); */
   background-color:ghostwhite;
   border: 1px solid #ccc;
   border-radius: 8px;
   width: 300px;
-  cursor:pointer;
+  height: 100px;
   margin-bottom: 2vh;
   margin-top: 2vh;
   border-style:double;
